@@ -2,10 +2,10 @@ WEB2:TPE
 
 INTEGRANTES:
 
-Marcos Damian Molina - mm8205540@gmail.com
+Marcos Damian Molina - mm8205540@gmail.com (A)
 
 Gaston ignacio Berroa
-gastonberroa@gmail.com
+gastonberroa@gmail.com (B)
 
 TEMATICA : Peliculas
 
