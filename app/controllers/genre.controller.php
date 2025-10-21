@@ -27,7 +27,7 @@ class GenreController
         $genre = $_POST['genre'];
 
         $this->model->insertGenre($genre);
-        header('Location: http://localhost/WEB2_2024/web2-TPE/editar/categoria');
+        header('Location: ' . BASE_URL);
     }
     function editGenres()
     {
@@ -42,7 +42,7 @@ class GenreController
         }
         $genre = $_POST['genre'];
         $this->model->updateGenre($id, $genre);
-        header('Location: http://localhost/WEB2_2024/web2-TPE/categorias');
+        header('Location: ' . BASE_URL);
     }
     function deleteGenre($id)
     {
@@ -53,7 +53,7 @@ class GenreController
             $errorView->showError("No se puede eliminar porque hay peliculas en esta categoria");
         } else {
             $this->model->removeGenre($id);
-            header('Location: http://localhost/WEB2_2024/web2-TPE/editar/categoria');
+            header('Location: ' . BASE_URL);
         }
     }
 }

@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+   background-color: #1e1e2f;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+.navbar {
+  background-color: #1c1c4e;
+  padding: 1rem 2rem;
+  color: white;
+}
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar__logo {
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar__menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.navbar__menu a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.navbar__menu a:hover {
+  color: #00bcd4;
+}
+
+.catalog {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.catalog__title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+.addmovie__link{
+  margin: 10px 15px 15px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ffffff;
+  font-weight: 600;
+  align-self: flex-start;
+  transition: color 0.2s ease;
+}
+.addmovie__link:hover {
+  color: #0056b3;
+}
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #1c1c4e;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.card__image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card__title {
+  font-size: 1.25rem;
+  margin: 15px;
+  color: #ffffff;
+}
+
+.card__text {
+  margin: 0 15px 10px;
+  font-size: 0.9rem;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.card__link {
+  margin: 10px 15px 15px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  align-self: flex-start;
+  transition: color 0.2s ease;
+}
+
+.card__link:hover {
+  color: #0056b3;
+}
+.movie_container{
+  margin: 20px auto; /* Centra el bloque y le da margen arriba y abajo */
+  align-content: center;
+  padding: 15px;
+  border: 1px solid;
+  border-radius: 8px;
+  background-color: #1c1c4e;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.movie_image{
+  width: 50%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.genre__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 10px 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Título */
+.genre__title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Cada enlace de categoría */
+.genre__link {
+  flex: 1 1 150px; /* Tamaño flexible para adaptarse */
+  display: block;
+  text-decoration: none;
+  background-color: #1c1c4e;
+  color:#ffffff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.genre__link:hover,
+.genre__link:focus {
+  background-color: #2980b9;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(41, 128, 185, 0.6);
+  outline: none;
+}
+
+/* Enlace para editar categorías */
+.edit__link {
+  display: block;
+  margin: 30px auto 0;
+  max-width: 200px;
+  padding: 10px 0;
+  background-color: #e74c3c;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.edit__link:hover,
+.edit__link:focus {
+  background-color: #c0392b;
+  outline: none;
+}
+
+/* Contenedor del formulario centrado */
+.login__form {
+  max-width: 300px;
+  margin: 50px auto; /* Centra horizontalmente y un poco de margen arriba */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* Etiquetas y campos en bloque */
+.login__label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Inputs con tamaño completo */
+.login__label input {
+  margin-top: 5px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Botón centrado y estilizado */
+.login__button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login__button:hover {
+  background-color: #0056b3;
+}
+/* Contenedor del formulario para nueva categoría */
+.form-genre-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.form-genre-container form {
+    background: #fff;
+    padding: 20px 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-genre-container input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.form-genre-container button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-genre-container button:hover {
+    background-color: #218838;
+}
+
+/* Contenedor de categorías existentes */
+.genre-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.genre-container form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.genre-container input[type="text"] {
+    padding: 8px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Botones de cada categoría */
+.genre-container button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.genre-container button:hover {
+    background-color: #0069d9;
+}
+
+.genre-container a {
+    padding: 8px 12px;
+    background-color: #dc3545;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.genre-container a:hover {
+    background-color: #c82333;
+}
+
+.footer {
+  background-color: #1e1e55;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+.footer__text {
+  font-size: 1rem;
+  opacity: 0.8;
+}

@@ -1,20 +1,12 @@
 <?php require_once 'layouts/header.phtml'; ?>
 
-<div>
-    <div>
-        <div>
-            <div>
-                <img src="<?= $movie->img ?>" alt="Portada de <?= $movie->title ?>">
-                <div>
-                    <h5 ><?= $movie->title ?></h5>
-                    <p><strong>Director:</strong> <?= $movie->director ?></p>
-                    <p> <strong>Género:</strong> <?= $movie->genre ?></p>
-                    <p> <strong>Descripción:</strong> <?= $movie->descrip ?></p>
-                    <a href="home">Volver al catalogo</a>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class ="movie_container">
+    <img class ="movie_image" src="<?= $movie->img ?>" alt="Portada de <?= $movie->title ?>">
+    <h5 class="card__title" ><?= $movie->title ?></h5>
+    <p class = "card__text"><strong>Director:</strong> <?= $movie->director ?></p>
+    <p class = "card__text"> <strong>Género:</strong> <?= $movie->genre ?></p>
+    <p class = "card__text"> <strong>Descripción:</strong> <?= $movie->descrip ?></p>
+    <a class = "card__link" href="home">Volver al catalogo</a>
 </div>
 
 <?php require_once 'layouts/footer.phtml'; ?>

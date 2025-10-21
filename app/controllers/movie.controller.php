@@ -98,11 +98,11 @@ class MovieController
       $descrip = $_POST['descrip'];
 
       $this->model->updateMovie($title, $director, $id_genre, $descrip, $img, $id);
-      header('Location: http://localhost/WEB2_2024/web2-TPE/editar');
+      header('Location: ' . BASE_URL);
    }
    function deleteMovie($id)
    {
       $this->model->removeMovie($id);
-      header('Location: http://localhost/WEB2_2024/web2-TPE/editar');
+      header('Location: ' . BASE_URL);
    }
 }

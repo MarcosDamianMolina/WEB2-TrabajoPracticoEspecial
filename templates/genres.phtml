@@ -1,11 +1,12 @@
 <?php require_once 'layouts/header.phtml' ?>
 
-<h1>Categorias</h1>
-<div>
+<h1 class="genre__title">Categorias</h1>
+
+<div class="genre__container">
     <?php foreach ($genres as $genre): ?>
-        <a href="categoria/<?= $genre->id ?>"><?= $genre->genre ?></a>
+        <a class= "genre__link" href="categoria/<?= $genre->id ?>"><?= $genre->genre ?></a>
     <?php endforeach ?>
-    <a href="editar/categoria">Editar Categorias</a>
+    <a class ="edit__link"href="editar/categoria">Editar Categorias</a>
 </div>
 
 

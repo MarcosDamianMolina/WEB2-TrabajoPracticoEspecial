@@ -1,21 +1,18 @@
 <?php require_once 'layouts/header.phtml' ?>
-<div>
-  <h1>Catálogo de Películas</h1>
+<div class="catalog">
+  <h1 class="catalog__title">Catálogo de Películas</h1>
   
-  <div>
+  <div class = "card_container">
     <?php foreach ($movies as $movie): ?>
-      <div>
-        <div>
-          <img src="<?= $movie->img ?>" alt="Portada de <?= $movie->title ?>">
-          <div >
-            <h5 ><?= $movie->title ?></h5>
-            <p ><strong>Director:</strong> <?= $movie->director ?></p>
-            <p ><strong>Género:</strong> <?= $movie->genre ?></p>
-            <a href="pelicula/<?= $movie->id ?>">Leer mas</a>
-          </div>
-        </div>
+      <div class = "card">
+        <img class="card__image" src="<?= $movie->img ?>" alt="Portada de <?= $movie->title ?>">
+        <h5 class="card__title"><?= $movie->title ?></h5>
+        <p class = "card__text"><strong>Director:</strong> <?= $movie->director ?></p>
+        <p class = "card__text"><strong>Género:</strong> <?= $movie->genre ?></p>
+        <a class = "card__link" href="pelicula/<?= $movie->id ?>">Leer mas</a>
       </div>
-    <?php endforeach; ?>
+      <?php endforeach; ?>
   </div>
-</div>
+  
+  </div>
 <?php require_once 'layouts/footer.phtml' ?>

@@ -1,27 +1,23 @@
 <?php require_once 'layouts/header.phtml' ?>
 
-<h1 >Editor de categorias</h1>
-<div>
+<h1 class="catalog-title">Editor de categorias</h1>
+<div class="form-genre-container">
     <form action="add/categoria" method="POST">
         <div>
-            <label>Nueva categoria</label>
+            <label >Nueva categoria</label>
             <input required name="genre" type="text" placeholder="nombre de la nueva categoria">
             <button type="submit">Agregar</button>
         </div>
     </form>
 </div>
-<div>
+<div class="genre-container">
     <?php foreach ($genres as $genre): ?>
         <form action="editar/categoria/<?= $genre->id ?>" method="POST">
+            <input required name="genre" type="text" value="<?= $genre->genre ?>">
             <div>
-                <div>
-                    <input required name="genre" type="text" value="<?= $genre->genre ?>">
-                    <div>
-                        <button type="submit">Editar</button>
-                        <a href="eliminar/categoria/<?= $genre->id ?>">Eliminar</a>
-                    </div>
-                </div>
-            </div>
+                <button type="submit">Editar</button>
+                <a href="eliminar/categoria/<?= $genre->id ?>">Eliminar</a>
+            </div> 
         </form>
     <?php endforeach ?>
 </div>

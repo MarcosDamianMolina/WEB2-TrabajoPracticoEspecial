@@ -10,5 +10,3 @@ gastonberroa@gmail.com (B)
 TEMATICA : Peliculas
 
 Una pagina donde los usuarios pueden filtrar las peliculas por genero
-
-USUARIO ADMIN: webadmin(username) admin(password)
