@@ -1,0 +1,46 @@
+<?php require_once 'layouts/header.phtml' ?>
+
+<div>
+<form action="add" method="POST">
+    <div>
+        <div>
+            <div>
+                <label>Título</label>
+                <input required name="title" type="text">
+            </div>
+        </div>
+        <div>
+            <div>
+                <label>Director</label>
+                <input required name="director" type="text">
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <label>Genero</label>
+                <select required name="genre">
+                    <?php foreach ($genres as $genre) : ?>
+                        <option value="<?= $genre->id ?>"> <?= $genre->genre ?></option>
+                    <?php endforeach ?>
+                </select>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label>Portada</label>
+                <input required name="img" type="text" placeholder="Url de la imagen"> 
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <label>Descripcion</label>
+        <textarea name="descrip" rows="3"></textarea>
+    </div>
+
+    <button type="submit">Guardar</button>
+</form>
+</div>
+
+<?php require_once 'layouts/footer.phtml' ?>

@@ -1,0 +1,23 @@
+<?php require_once 'layouts/header.phtml' ?>
+
+<div>
+  <h1>Nombre de la categoria</h1>
+
+  <div>
+    <?php foreach ($movies as $movie): ?>
+      <div>
+        <div>
+          <img src="<?= $movie->img ?>" alt="Portada de <?= $movie->title ?>">
+          <div>
+            <h5><?= $movie->title ?></h5>
+            <p><strong>Director:</strong> <?= $movie->director ?></p>
+            <p><strong>Género:</strong> <?= $movie->genre ?></p>
+            <a href="pelicula/<?= $movie->id ?>">Leer mas</a>
+          </div>
+        </div>
+      </div>
+    <?php endforeach; ?>
+  </div>
+</div>
+
+<?php require_once 'layouts/footer.phtml' ?>

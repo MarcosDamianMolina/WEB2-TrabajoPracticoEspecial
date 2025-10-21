@@ -1,0 +1,21 @@
+<?php require 'templates/layouts/header.phtml' ?>
+
+<?php if ($error): ?>
+    <div role='alert'>
+        <?= $error ?>
+    </div>
+<?php endif ?>
+
+<form method='post' action='login'>
+    <div>
+        <label for='username'>Nombre de Usuario</label>
+        <input type='text' id='username' name='username' required>
+    </div>
+    <div>
+        <label for='password'>Password</label>
+        <input type='password' id='password' name='password' required>
+    </div>
+    <button type='submit'>Login</button>
+</form>
+
+<?php require 'templates/layouts/footer.phtml' ?>
